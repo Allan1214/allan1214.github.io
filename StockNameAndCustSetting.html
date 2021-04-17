@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Setting</title>
+    <style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    #set-item-table,
+    #set-cust-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 10vh auto;
+    }
+
+    #set-item-table td,
+    #set-item-table th,
+    #set-cust-table td,
+    #set-cust-table th {
+    border: 1px solid black;
+    width: 4.8vw;
+    height: 16px;
+    font-size: 13px;
+}
+
+#set-item-table input,
+#set-cust-table input {
+    font-size: 10px;
+    font-family: verdana, arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    }
+
+    textarea:focus,
+    input:focus {
+    outline: none;
+    background-color: rgb(192, 192, 192);
+    }
+
+    textarea:hover,
+    input:hover {
+    background-color: rgb(236, 236, 236);
+    }
+
+    #set-item-table tr:nth-child(3),
+    #set-item-table tr:nth-child(9) {
+        border-bottom: double black;
+    }
+    </style>
+</head>
+<body>
+    <h1>Manage Item Name and Customer Name</h1>
+    <p>Once summit, start from today's order sheet will be updated <br>
+        anything amended below here will affect today's order sheet (be careful if you have key in some order)</p>
+    <table id="set-item-table">
+        <tr>
+            <th rowspan="6">Page 1</th>
+            <th>Chi Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Eng Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Farm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Chi Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Eng Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Farm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th rowspan="6">Page 2</th>
+            <th>Chi Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Eng Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Farm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Chi Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Eng Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Farm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th rowspan="3">Page 3</th>
+            <th>Chi Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Eng Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Farm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th rowspan="3">Page 4</th>
+            <th>Chi Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Eng Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Farm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th rowspan="3">Page 5</th>
+            <th>Chi Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Eng Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Farm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th rowspan="3">Page 6</th>
+            <th>Chi Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Eng Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Farm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th rowspan="3">Page 7</th>
+            <th>Chi Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Eng Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Farm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table> 
+    <table id="set-cust-table">
+        <tr>
+            <th>Page3</th>
+            <th>Page4</th>
+            <th>Page5</th>
+            <th>Page6</th>
+            <th>Page7</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <button>Submit</button>
+    <script>
+        Array.from(document.querySelectorAll("td")).forEach((td) => {
+            const input = document.createElement("input");
+            td.appendChild(input);
+        })
+        let Page1 = ["菜心","甜菜心","大芥菜","香菜胆","生菜","葱","应菜","马儿白","苋菜","红苋菜","番薯叶","羊角豆","羊角豆","羊角豆","羊角豆","酸桔","马尼菜","芹菜",
+                        "Sawi","S. Manis","S. Pahit","Lettuce","C. Lettuce","Onion","K. Kong","Pek Chai","B. Hijau","B. Merah","L. Finger","L. Finger","L. Finger","L. Finger","D. Keledek","Limau","C. Manis","D. Sup",
+                        "J1","J2","J3","J2","J1","J3","J1","J2","J3","J3","J3","CKM","HSM","12 Bal.","Koo","Yang","CKM","12ml",
+                        "芥兰","大芥菜","马尼菜","皇京白","皱菜","奶白","小白菜","苋菜","红苋菜","尖苋","维他命","番薯叶","千宝菜","酸桔","","","","",
+                        "Kailan","S. Pahit","C. Manis","Wong K. P.","Kiew Chai","Sawi Susu","Siaw P. C.","B. Hijau","B. Merah","B. Tajam","S. Vitamin","D. Keledek","S. Senpo","Limau","","","","",
+                        "29","31A","","31B","31A","31B","31B","31A","29","31A","31A","31U","31A","31U","","","",""];
+        let Page2 = ["菜心","甜菜心","大芥菜","香菜胆","生菜","葱","应菜","马儿白","苋菜","红苋菜","","","","","","","","",
+                        "Sawi","S. Manis","S. Pahit","Lettuce","C. Lettuce","Onion","K. Kong","Pek Chai","B. Hijau","B. Merah","","","","","","","","",
+                        "J1","J2","J3","J2","J1","J3","J1","J2","J3","J3","","","","","","","","",
+                        "芥兰","大芥菜","马尼菜","皇京白","皱菜","奶白","小白菜","苋菜","红苋菜","尖苋","维他命","番薯叶","千宝菜","","","","","",
+                        "Kailan","S. Pahit","C. Manis","Wong K. P.","Kiew Chai","Sawi Susu","Siaw P. C.","B. Hijau","B. Merah","B. Tajam","S. Vitamin","D. Keledek","S. Senpo","","","","","",
+                        "29","31A","","31B","31A","31B","31B","31A","29","31A","31A","31U","31A","","","","",""];
+        let Page3n5 = ["菜心","甜菜心","大芥菜","香菜胆","生菜","葱","应菜","马儿白","苋菜","红苋菜","番薯叶","羊角豆","羊角豆","羊角豆","羊角豆","酸桔","马尼菜","芹菜",
+                        "Sawi","S. Manis","S. Pahit","Lettuce","C. Lettuce","Onion","K. Kong","Pek Chai","B. Hijau","B. Merah","L. Finger","L. Finger","L. Finger","L. Finger","D. Keledek","Limau","C. Manis","D. Sup",
+                        "J1","J2","J3","J2","J1","J3","J1","J2","J3","J3","J3","CKM","HSM","12 Bal.","Koo","Yang","CKM","12ml"];
+        let Page4n6 = ["芥兰","大芥菜","马尼菜","皇京白","皱菜","奶白","小白菜","苋菜","红苋菜","尖苋","维他命","番薯叶","千宝菜","酸桔","","","","",
+                        "Kailan","S. Pahit","C. Manis","Wong K. P.","Kiew Chai","Sawi Susu","Siaw P. C.","B. Hijau","B. Merah","B. Tajam","S. Vitamin","D. Keledek","S. Senpo","Limau","","","","",
+                        "29","31A","","31B","31A","31B","31B","31A","29","31A","31A","31U","31A","31U","","","",""];
+        let Page7 = ["羊角豆","羊角豆","","酸桔","","","","","","","","","","","","","","",
+                        "L. Finger","L. Finger","","","","","","","","","","","","","","","","",
+                        "CKM","HSM","","31U","","","","","","","","","","","","","",""]
+        let Page1Name = Array.from(document.querySelectorAll("td input")).slice(0, 108);
+        for (let i = 0; i < Page1Name.length; i++) {
+            Page1Name[i].value = Page1[i];
+        }
+        let Page2Name = Array.from(document.querySelectorAll("td input")).slice(108, 216);
+        for (let i = 0; i < Page2Name.length; i++) {
+            Page2Name[i].value = Page2[i]
+        }
+        let Page3Name = Array.from(document.querySelectorAll("td input")).slice(216, 270);
+        let Page5Name = Array.from(document.querySelectorAll("td input")).slice(324, 378);
+        let Page4Name = Array.from(document.querySelectorAll("td input")).slice(270, 324);
+        let Page6Name = Array.from(document.querySelectorAll("td input")).slice(378, 432);
+        let Page7Name = Array.from(document.querySelectorAll("td input")).slice(432, 486);
+        for (let i = 0; i < Page3Name.length; i++) {
+            Page3Name[i].value = Page3n5[i];
+            Page5Name[i].value = Page3n5[i];
+            Page4Name[i].value = Page4n6[i];
+            Page6Name[i].value = Page4n6[i];
+            Page7Name[i].value = Page7[i];
+        }
+
+        let custTable = Array.from(document.querySelectorAll("#set-cust-table input"));
+        let Page3CustInput = [];
+        let Page4CustInput = [];
+        let Page5CustInput = [];
+        let Page6CustInput = [];
+        let Page7CustInput = [];
+        for (let i = 0; i < custTable.length; i++) {
+            if (i % 5 == 0) {
+                Page3CustInput.push(custTable[i]);
+                Page4CustInput.push(custTable[i+1]);
+                Page5CustInput.push(custTable[i+2]);
+                Page6CustInput.push(custTable[i+3]);
+                Page7CustInput.push(custTable[i+4]);
+            }
+        }
+        let Page3CustName = ["9212","U-4ML","U-KC","U-888","U-3ML","U-SAM","U-GR","U-PEN","U-7ML","U-P","U-A.S","U-SMG","U-FS","U-18ML","U-EM","U-MS","U-PP","U-EG","U-FC","U-MM","U-BAU","KH","FARLEY","HAKRI-3ML","ELLI","SENG","J330","5566","3698","LKS"];
+        let Page4CustName = ["9212","U-4ML","U-KC","U-888","U-3ML","U-SAM","U-GR","U-PEN","U-7ML","U-P","U-A.S","U-SMG","U-FS","U-18ML","U-EM","U-MS","U-PP","U-EG","U-FC","U-MM","U-BAU","KH","FARLEY","HAKRI-3ML","ELLI","SENG","5566","3698","LKS",""];
+        let Page5CustName = ["8136","4217","2300","7987","1704","81","337","6343","125","396","SA","U-SRI","","","","","","","","","","","","","","","","","",""];
+        let Page6CustName = ["8136","4217","2300","7987","1704","81","337","6343","125","396","SA","U-SRI","","","","","","","","","","","","","","","","","",""];
+        let Page7CustName = ["EV-4ML","EV-BDC","EV-PEN","EV-PDN","EV-PLZ","","","","","","","","","","","","","","","","","","","","","","","","",""];
+        for (let i = 0; i < Page3CustInput.length; i++) {
+            Page3CustInput[i].value = Page3CustName[i];
+            Page4CustInput[i].value = Page4CustName[i];
+            Page5CustInput[i].value = Page5CustName[i];
+            Page6CustInput[i].value = Page6CustName[i];
+            Page7CustInput[i].value = Page7CustName[i];
+
+        }
+ 
+
+    </script>
+</body>
+</html>

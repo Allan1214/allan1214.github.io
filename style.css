@@ -1,0 +1,303 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.15s ease-out;
+}
+
+#navbar {
+  z-index: 100;
+  position: fixed;
+  height: 8vh;
+  width: 100vw;
+  background-color: gray;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+  height: 8vh;
+  justify-content: space-between;
+}
+
+#navbar li {
+  font-size: 1.5625rem;
+  height: 8vh;
+  width: 9vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar ul li:first-child {
+  width: 20vw;
+}
+
+#navbar ul li:nth-child(2):hover,
+#navbar ul li:nth-child(3):hover,
+#navbar ul li:nth-child(4):hover,
+#navbar ul li:nth-child(5):hover,
+#navbar ul li:nth-child(6):hover,
+#navbar ul li:nth-child(7):hover,
+#navbar ul li:nth-child(8):hover {
+  cursor: pointer;
+  background-color: rgb(165, 165, 165);
+}
+
+#navbar ul li:nth-child(2):active,
+#navbar ul li:nth-child(3):active,
+#navbar ul li:nth-child(4):active,
+#navbar ul li:nth-child(5):active,
+#navbar ul li:nth-child(6):active,
+#navbar ul li:nth-child(7):active,
+#navbar ul li:nth-child(8):active {
+  font-size: 30px;
+}
+
+#order-sheet #page1 table tr:nth-child(10) td:nth-child(n + 2) {
+  border-bottom: double black;
+}
+
+#order-sheet #page2 table tr:nth-child(12) td:nth-child(n + 2) {
+  border-bottom: double black;
+}
+
+#order-sheet {
+  padding-top: 10vh;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-around;
+  width: 700vw;
+}
+
+#order-sheet table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 auto;
+}
+
+#order-sheet td {
+  border: 1px solid black;
+  width: 6vw;
+}
+
+/* for wrinting limit quantity and side crt */
+#order-sheet tr:nth-child(1) td,
+#order-sheet #page1-table-upper tr:nth-child(2) td,
+#order-sheet #page1-table-lower tr:nth-child(2) td,
+#order-sheet #page2-table-upper tr:nth-child(2) td,
+#order-sheet #page2-table-lower tr:nth-child(2) td,
+#order-sheet td:first-child {
+  border: none;
+}
+
+#order-sheet div:nth-child(-n + 2) tr:nth-child(4) td {
+  border-bottom: none;
+}
+
+#order-sheet div:nth-child(-n + 2) tr:nth-child(5) td {
+  border-top: none;
+}
+
+#order-sheet div:nth-child(n + 3) tr:nth-child(3) td {
+  border-bottom: none;
+}
+
+#order-sheet div:nth-child(n + 3) tr:nth-child(4) td {
+  border-top: none;
+}
+
+#order-sheet textarea,
+#order-sheet input,
+canvas {
+  font-family: verdana, arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  text-align: center;
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  height: 16px;
+}
+
+#order-sheet textarea:focus,
+input:focus {
+  outline: none;
+  background-color: rgb(192, 192, 192);
+}
+
+/* #order-sheet td:nth-child(2) textarea {
+  text-align: left;
+} */
+
+/* #page1 td:first-child textarea {
+  width: 7vw;
+} */
+
+#order-sheet textarea:hover,
+#order-sheet input:hover {
+  background-color: lightgrey;
+}
+
+.mixed {
+  background-color: rgb(172, 238, 172);
+}
+
+#order-sheet td:nth-child(1) textarea {
+  text-align: right;
+}
+
+#order-sheet #page1 td,
+#order-sheet #page2 td {
+  width: 5vw;
+}
+
+#order-sheet #page1 td textarea,
+#order-sheet #page2 td textarea {
+  text-align: center;
+}
+
+#save {
+  background-color: lightgreen;
+  border: none;
+  height: 5vh;
+  width: 6vw;
+  font-size: 15px;
+}
+
+#save:hover {
+  background-color: green;
+  color: white;
+}
+
+#select {
+  background-color: lightblue;
+  margin-left: 1vw;
+  border: none;
+  height: 3.9vh;
+  width: 4vw;
+}
+
+#select:hover {
+  background-color: blue;
+  color: white;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  transform: scale(1.2);
+}
+
+#order-sheet
+  div:nth-child(n + 3)
+  tr:nth-child(n + 4):not(:nth-last-child(-n + 2))
+  td:nth-child(n + 3)
+  textarea::placeholder,
+#order-sheet
+  div:nth-child(n + 3)
+  tr:nth-child(n + 4):not(:nth-last-child(-n + 2))
+  td:nth-child(n + 3)
+  input::placeholder {
+  text-align: right;
+}
+
+#order-sheet div:nth-child(-n + 2) textarea::placeholder,
+#order-sheet div:nth-child(-n + 2) input::placeholder {
+  text-align: center;
+}
+
+.unaco::placeholder {
+  text-align: center !important;
+}
+
+.switch {
+  position: relative;
+  width: 4.2vw;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.switch-checkbox {
+  display: none;
+}
+
+.switch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  height: 30px;
+  padding: 0;
+  line-height: 15px;
+  border: 2px solid #cccccc;
+  border-radius: 16px;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease-in;
+}
+.switch-label:before {
+  content: "";
+  display: block;
+  width: 25px;
+  margin: 0px;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 24px;
+  border: 2px solid #cccccc;
+  border-radius: 16px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.switch-checkbox:checked + .switch-label {
+  background-color: #49e845;
+}
+
+.switch-checkbox:checked + .switch-label,
+.switch-checkbox:checked + .switch-label:before {
+  background-color: #49e845;
+  border-color: #49e845;
+}
+
+.switch-checkbox:checked + .switch-label:before {
+  right: 0px;
+}
+
+div:nth-child(n + 3) tr:nth-child(-n + 3) td {
+  background-color: white;
+  position: sticky;
+}
+
+span {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  color: gray;
+  font-size: 14px;
+}
+
+.clear {
+  display: block;
+  margin: auto;
+  height: 20px;
+  width: 20px;
+}
+
+.clear:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.clear:active {
+  transform: scale(0.9);
+}
+
+/* learn some table css respondsive */
+/* fit to computer screen, phone screen, phone rotate landscape */
+/* make the table printable in A4 size */
